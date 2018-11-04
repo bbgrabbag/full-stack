@@ -12,6 +12,8 @@ Deploy a containerized MERN app with an automated build and testing process.
 - Testing
   - React Testing Library
   - Jest
+  - Postman
+  - Compass
 - Version Control
   - Git
 - Docker
@@ -23,5 +25,5 @@ Deploy a containerized MERN app with an automated build and testing process.
 
 #### Setup
 - Create a git repo
-- 
+- Generate docker image
   
