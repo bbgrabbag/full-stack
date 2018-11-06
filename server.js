@@ -1,5 +1,7 @@
 require('dotenv').config();
-
+const { db } = require('./db');
 const { app } = require('./app');
+const { onServerConnection, onDbConnection } = require('./lib');
 
-app.listen(process.env.PORT);
+db.on('open', onDbConnection);
+app.listen(process.env.PORT, process.env.HOSTNAME, onServerConnection);
