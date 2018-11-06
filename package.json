@@ -4,9 +4,10 @@
   "description": "Deploy a containerized MERN app with an automated build and testing process.",
   "main": "server.js",
   "scripts": {
+    "lint": "eslint",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "export PORT=8080 && nodemon --inspect server.js || true",
-    "start": "node server.js"
+    "dev": "nodemon --inspect ./src/server.js || true",
+    "start": "node ./src/server.js"
   },
   "keywords": [
     "mern"
@@ -17,6 +18,7 @@
   "author": "ben turner",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^6.1.0",
     "express": "^4.16.4"
   },
   "devDependencies": {
