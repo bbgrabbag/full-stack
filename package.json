@@ -4,10 +4,9 @@
   "description": "Deploy a containerized MERN app with an automated build and testing process.",
   "main": "server.js",
   "scripts": {
-    "lint": "eslint",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --inspect ./src/server.js || true",
-    "start": "node ./src/server.js"
+    "test": "./bin/test",
+    "dev": "./bin/dev",
+    "start": "./bin/start"
   },
   "keywords": [
     "mern"
@@ -19,7 +18,8 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^6.1.0",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "mongoose": "^5.3.9"
   },
   "devDependencies": {
     "eslint": "^5.8.0",

@@ -26,3 +26,5 @@ Deploy a containerized MERN app with an automated build and testing process.
 #### Setup
 - Create a git repo
 - Dockerfile will be generated once app is MVP
+- Add test/dev/start scripts
+- 
