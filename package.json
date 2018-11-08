@@ -11,6 +11,9 @@
   "keywords": [
     "mern"
   ],
+  "jest": {
+    "testEnvironment": "node"
+  },
   "repository": {
     "github": "https://github.com/bbgrabbag/full-stack"
   },
@@ -22,7 +25,9 @@
     "express": "^4.16.4",
     "jsonwebtoken": "^8.3.0",
     "mongoose": "^5.3.9",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "jest-environment-node": "^23.4.0",
+    "mongodb-memory-server": "^2.7.0"
   },
   "devDependencies": {
     "eslint": "^5.8.0",
@@ -30,6 +35,7 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.6.0",
     "nodemon": "^1.18.6"
   }
 }

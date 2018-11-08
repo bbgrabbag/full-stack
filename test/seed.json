@@ -1,0 +1,18 @@
+{
+  "users": [{
+      "_id": "5be3d8ec7517b98b75b11898",
+      "username": "eiusmod",
+      "password": "id"
+    },
+    {
+      "_id": "5be3d8ecbb05c3990636fd7f",
+      "username": "nisi",
+      "password": "laboris"
+    },
+    {
+      "_id": "5be3d8ec6c0f544cb8a13f53",
+      "username": "culpa",
+      "password": "labore"
+    }
+  ]
+}

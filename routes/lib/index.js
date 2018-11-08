@@ -1,11 +1,11 @@
 const jwt = require('jsonwebtoken');
 
-const User = require('../../../db/models/user');
+const { saveNewUser, findOneUser } = require('../../db/lib');
 
 const catchError = cb => (req, res, next) => cb(req, res, next).catch(next);
 
 const handleExistingUser = async (req, res, next) => {
-  const user = await User.findOne({ username: req.body.username });
+  const user = await findOneUser({ username: req.body.username });
   if (user) {
     res.status(403);
     throw Error('That user already exists');
@@ -14,8 +14,8 @@ const handleExistingUser = async (req, res, next) => {
   }
 };
 
-const findUser = async (req, res, next) => {
-  const user = await User.findOne({ username: req.body.username });
+const findUser = async (req, _res, next) => {
+  const user = await findOneUser({ username: req.body.username });
   if (!user) {
     throw Error('User does not exist');
   } else {
@@ -34,7 +34,7 @@ const validatePassword = async (req, _res, next) => {
 };
 
 const addUser = async (req, _res, next) => {
-  const user = await new User(req.body).save();
+  const user = await saveNewUser(req.body);
   req.user = user;
   next();
 };

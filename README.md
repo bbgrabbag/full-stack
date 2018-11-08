@@ -32,4 +32,8 @@ Deploy a containerized MERN app with an automated build and testing process.
 - login and signup routes
 - password hashing
 - setup tests
+- run tests
 - add/commit and merge to master w/o tests and other non-prod deps
+
+#### Notes
+
