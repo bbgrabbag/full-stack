@@ -8,6 +8,4 @@ app.use(middleware.pre);
 app.use(mainRouter);
 app.use(middleware.error);
 
-module.exports = {
-  app,
-};
+module.exports = app;

@@ -1,6 +1,5 @@
 const jwt = require('jsonwebtoken');
-
-const { saveNewUser, findOneUser } = require('../../db/lib');
+const { saveNewUser, findOneUser } = require('../../models/lib');
 
 const catchError = cb => (req, res, next) => cb(req, res, next).catch(next);
 

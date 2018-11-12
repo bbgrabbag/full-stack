@@ -1,5 +1,6 @@
 #!/bin/bash
 
 export NODE_ENV=test
+export MONGODB_URI=mongodb://localhost:27017/phyzio
 eslint .
 jest --detectOpenHandles

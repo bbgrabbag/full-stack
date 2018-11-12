@@ -1,4 +1,6 @@
-module.exports = async () => {
-  console.log('Teardown mongod');
-  await global.__MONGOD__.stop();
+const db = require('../db');
+
+module.exports = async  () => {
+  console.log('Teardown test DB')
+  await db.close();
 };

@@ -11,9 +11,6 @@
   "keywords": [
     "mern"
   ],
-  "jest": {
-    "testEnvironment": "node"
-  },
   "repository": {
     "github": "https://github.com/bbgrabbag/full-stack"
   },
@@ -28,6 +25,9 @@
     "request": "^2.88.0",
     "jest-environment-node": "^23.4.0",
     "mongodb-memory-server": "^2.7.0"
+  },
+  "jest": {
+    "globalTeardown": "./test/teardown.js"
   },
   "devDependencies": {
     "eslint": "^5.8.0",
