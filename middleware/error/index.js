@@ -1,5 +1,8 @@
 module.exports = {
-  xhr: (err, req, res, _next) => {
+  xhr: (err, _req, res, _next) => {
+    if (err.name === 'ValidationError') {
+      res.status(404);
+    }
     res.send({ reason: err.message });
   },
 };

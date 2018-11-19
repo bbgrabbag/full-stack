@@ -19,5 +19,9 @@
   "registeredUser": {
     "username": "culpa",
     "password": "labore"
+  },
+  "wrongPwdUser": {
+    "username": "culpa",
+    "password": "wrong"
   }
 }

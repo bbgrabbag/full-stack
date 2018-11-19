@@ -2,5 +2,7 @@
 
 export NODE_ENV=test
 export MONGODB_URI=mongodb://localhost:27017/phyzio
+export SECRET=test
+
 eslint .
-jest --detectOpenHandles
+jest  --runInBand --detectOpenHandles --verbose -- $1

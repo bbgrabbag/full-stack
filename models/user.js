@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
-const db = require('../db');
-const { hashPassword } = require('./utils');
+const { hashPassword, auth } = require('./utils');
 
 const userSchema = mongoose.Schema({
   username: {
@@ -15,5 +14,6 @@ const userSchema = mongoose.Schema({
 });
 
 userSchema.pre('save', hashPassword);
+userSchema.methods.auth = auth;
 
-module.exports = db.model('User', userSchema);
+module.exports = mongoose.model('User', userSchema);

@@ -13,9 +13,10 @@ const handleExistingUser = async (req, res, next) => {
   }
 };
 
-const findUser = async (req, _res, next) => {
+const findUser = async (req, res, next) => {
   const user = await findOneUser({ username: req.body.username });
   if (!user) {
+    res.status(403);
     throw Error('User does not exist');
   } else {
     req.user = user;
@@ -23,11 +24,12 @@ const findUser = async (req, _res, next) => {
   }
 };
 
-const validatePassword = async (req, _res, next) => {
+const validatePassword = async (req, res, next) => {
   const matches = await req.user.auth(req.body.password);
   if (matches) {
     next();
   } else {
+    res.status(403);
     throw Error('Password does not match');
   }
 };

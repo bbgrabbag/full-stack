@@ -1,9 +1,12 @@
 require('dotenv').config();
+const mongoose = require('mongoose');
 
-const db = require('./db');
 const app = require('./app');
-const { onServerConnection, onDbConnection, onDbClose } = require('./lib');
+const { onServerConnection, onDbConnection } = require('./lib');
 
-db.on('open', onDbConnection);
-db.on('close', onDbClose);
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  keepAlive: true,
+}, onDbConnection);
+
 app.listen(process.env.PORT, process.env.HOSTNAME, onServerConnection);
